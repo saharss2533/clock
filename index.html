@@ -16,11 +16,15 @@
             top: 0; left: 0;
             width: 100vw; height: 100vh;
             pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: none;
+            
             mix-blend-mode: multiply;
             opacity: 0.3;
             z-index: 1000;
         }
-
+        /*
         .debug-info {
             position: fixed;
             top: 10px; left: 10px;
@@ -29,6 +33,7 @@
             padding: 10px; border-radius: 5px;
             z-index: 1001;
         }
+        */
 
         /* NEW: clock canvas pinned top-left, above overlay/debug */
         #clock {
@@ -37,6 +42,10 @@
             width: 130px; height: 130px;   /* visual size */
             background: transparent;
             pointer-events: none;
+            -webkit-user-select: none;
+            user-select: none;
+            touch-action: none;
+            
             z-index: 1002;
         }
     </style>
