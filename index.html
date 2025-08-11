@@ -10,14 +10,16 @@
         html, body { height: 100%; width: 100%; overflow: hidden; }
 
         body { background: transparent; position: relative; 
-              margin-top: 10px; 
+              margin-top: 15px; 
              // top: 5vh; left: 0;
               width: 100vw; height: 100vh;
              }
 
         .tint-overlay {
             position: fixed;
-            top: 0; left: 0;
+            //top: 0; 
+            top: var(--offset); 
+            left: 0;
             width: 100vw; height: 100vh;
             pointer-events: none;
             -webkit-user-select: none;
