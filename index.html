@@ -10,12 +10,14 @@
         html, body { height: 100%; width: 100%; overflow: hidden; }
 
         body { background: transparent; position: relative; 
-              top: -5vh; left: 0;
-            width: 100vw; height: 100vh;}
+              margin-top: 10px; 
+             // top: 5vh; left: 0;
+            //width: 100vw; height: 100vh;
+             }
 
         .tint-overlay {
             position: fixed;
-            top: -5vh; left: 0;
+            top: 0; left: 0;
             width: 100vw; height: 100vh;
             pointer-events: none;
             -webkit-user-select: none;
@@ -291,9 +293,9 @@
             // Apply tint
             let overlay = document.getElementById('tintOverlay');
             //overlay.style.backgroundColor = `rgb(${tintColor.r}, ${tintColor.g}, ${tintColor.b})`;
-            //overlay.style.background = `linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
-            overlay.style.backgroundImage = `linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
-            overlay.style.backgroundImage = `-webkit-linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
+            overlay.style.background = `linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
+            //overlay.style.backgroundImage = `linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
+            //overlay.style.backgroundImage = `-webkit-linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
             
             // --- NEW: Clock progress (12 → 5 over 5 minutes, then stop) ---
             const elapsedClock = ts - clockStartTs;
