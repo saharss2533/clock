@@ -26,7 +26,7 @@
             z-index: 1000;
         }
 
-        /*
+        
         .debug-info {
             position: fixed;
             top: 10px; left: 10px;
@@ -35,7 +35,7 @@
             padding: 10px; border-radius: 5px;
             z-index: 1001;
         }
-        */
+        
 
         /* NEW: clock canvas pinned top-left, above overlay/debug */
         #clock {
@@ -288,7 +288,8 @@
 
             // Apply tint
             let overlay = document.getElementById('tintOverlay');
-            overlay.style.backgroundColor = `rgb(${tintColor.r}, ${tintColor.g}, ${tintColor.b})`;
+            //overlay.style.backgroundColor = `rgb(${tintColor.r}, ${tintColor.g}, ${tintColor.b})`;
+            overlay.style.background = `linear-gradient(rgba(255, 0, 0, 0) 2%, rgba(${tintColor.r}, ${tintColor.g}, ${tintColor.b}, 1) 10%)`;
 
             // --- NEW: Clock progress (12 → 5 over 5 minutes, then stop) ---
             const elapsedClock = ts - clockStartTs;
